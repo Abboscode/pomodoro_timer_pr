@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 import ParentTimer from './components/ParentTimer'
@@ -10,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='h-screen w-screen  flex flex-col justify-between bg-amber-200'>
+      <div className='h-screen w-screen  flex flex-col justify-between bg-gray-900'>
         <div className=' '>TOP</div>
         <div className='flex flex-col justify-items-center'  >
           <ParentTimer></ParentTimer>
