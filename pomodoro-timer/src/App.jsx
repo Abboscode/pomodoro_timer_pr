@@ -10,8 +10,8 @@ function App() {
 
   return (
     <>
-      <div className='h-screen w-screen flex flex-col justify-between bg-amber-200'>
-        <div>TOP</div>
+      <div className='h-screen  flex flex-col justify-between bg-amber-200'>
+        <div className=' '>TOP</div>
         <div className='flex flex-col justify-items-center'  >
           <ParentTimer></ParentTimer>
         </div>
