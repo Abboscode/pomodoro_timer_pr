@@ -5,6 +5,7 @@ import PeriodButtons from "./PeriodButtons"
 import ClockActions from "./ClockActions"
 export default function ParentTimer() {
     const [isRunning, setIsRunning] = useState(false)
+    const [focus, setFocus] = useState(false)
     const [focusDuration, setFocusDuration] = useState([25, 0])
     const [breakDuration, setBreakDuration] = useState([5, 0])
 
@@ -54,10 +55,17 @@ export default function ParentTimer() {
         console.log(isRunning);
 
     }
+    const onClickShortBreak = () => {
+        setFocusDuration([5, 0])
+        setIsRunning(false)}
+
+    const onClickLongBreak = () => {
+        setFocusDuration([15, 0])
+        setIsRunning(false)}
     return (
 
-        <div className="flex flex-col w-screen justify-items-center"  >
-            <PeriodButtons focusDuration={focusDuration} breakDuration={breakDuration} setFocusDuration={setFocusDuration} setBreakDuration={setBreakDuration}></PeriodButtons>
+        <div className="flex flex-col  justify-items-center"  >
+            <PeriodButtons onClickLongBreak={onClickLongBreak} onClickShortBreak={onClickShortBreak} ></PeriodButtons>
             <Durations  focusDuration={focusDuration} breakDuration={breakDuration}></Durations>
             <ClockActions onClikkStart={() => onClickStart()} onClickPause={() => setIsRunning(false)} onClickReset={onClickReset} ></ClockActions>
         </div>
