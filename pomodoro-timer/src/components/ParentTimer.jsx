@@ -56,9 +56,9 @@ export default function ParentTimer() {
     }
     return (
 
-        <div className="flex flex-col justify-items-center"  >
+        <div className="flex flex-col w-screen justify-items-center"  >
             <PeriodButtons focusDuration={focusDuration} breakDuration={breakDuration} setFocusDuration={setFocusDuration} setBreakDuration={setBreakDuration}></PeriodButtons>
-            <Durations isRunningDuration={isRunning} focusDuration={focusDuration} breakDuration={breakDuration}></Durations>
+            <Durations  focusDuration={focusDuration} breakDuration={breakDuration}></Durations>
             <ClockActions onClikkStart={() => onClickStart()} onClickPause={() => setIsRunning(false)} onClickReset={onClickReset} ></ClockActions>
         </div>
 
