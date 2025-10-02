@@ -4,14 +4,17 @@ import './App.css'
 import ParentTimer from './components/ParentTimer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [background ,setBackground]= useState("bg-orange-600")
+  const changeBg = (bg) => {
+    setBackground(bg)
+  }
 
   return (
     <>
-      <div className='h-screen w-screen  flex flex-col justify-between bg-gray-900'>
+      <div className={`h-screen w-screen  flex flex-col justify-between ${background}`} >
         <div className=' '>TOP</div>
         <div className='flex flex-col justify-items-center'  >
-          <ParentTimer></ParentTimer>
+          <ParentTimer appBg={changeBg}></ParentTimer>
         </div>
         <div>Bottom</div>
       </div>
