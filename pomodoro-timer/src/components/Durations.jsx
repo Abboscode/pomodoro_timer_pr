@@ -3,8 +3,8 @@
 import {  useState } from "react"
 import { useEffect } from "react"
 import { useRef } from "react"
-export default function Durations({ isFocus ,isBreak, focusDuration=[25,0], breakDuration }) {
-  
+export default function Durations({ styleProp,isFocus ,isBreak, focusDuration=[25,0], breakDuration }) {
+  const style=styleProp
  const [min, sec] = isFocus? focusDuration: (isBreak)? breakDuration:focusDuration;
  
   
@@ -18,6 +18,6 @@ export default function Durations({ isFocus ,isBreak, focusDuration=[25,0], brea
 
  }
     return (
-    <div className="flex justify-center h-24 text-7xl  font-sans font-extrabold  "> {formatTime(min)+":"+formatTime(sec)}</div>
+    <div className={style}> {formatTime(min)+":"+formatTime(sec)}</div>
     
     )}
